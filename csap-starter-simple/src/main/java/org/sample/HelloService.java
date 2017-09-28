@@ -63,8 +63,8 @@ public class HelloService {
 					+ LocalDateTime.now().format( DateTimeFormatter.ofPattern( "HH:mm:ss,   MMMM d  uuuu " ) );
 		}
 	}
-	
-	@RequestMapping({ "helloWithOptionalName", "helloWithOptional/{name}" })
+	 
+	@RequestMapping({ "helloWithOptionalName", "helloWithOptionalName/{name}" })
 	public ObjectNode helloWithOptionalName ( @PathVariable Optional<String> name ) {
 
 		ObjectNode resultJson = jacksonMapper.createObjectNode();
